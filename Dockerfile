@@ -1,5 +1,5 @@
 # Use official Go image
-FROM golang:1.22-bullseye
+FROM golang:1.23.2-bullseye
 
 # Install ffmpeg
 RUN apt-get update && \
