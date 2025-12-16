@@ -1,0 +1,18 @@
+openapi: 3.0.0
+info:
+  title: WhatsApp Clone API
+  description: API for WhatsApp clone application
+  version: 1.0.0
+paths:
+  /api/v1/login:
+    post:
+      summary: User login
+      responses:
+        '200':
+          description: Login successful
+  /api/v1/register:
+    post:
+      summary: User registration
+      responses:
+        '200':
+          description: Registration successful
