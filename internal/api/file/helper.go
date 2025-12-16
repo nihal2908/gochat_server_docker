@@ -1,13 +1,13 @@
 package file
 
 import (
-	"net/http"
 	"image"
 	_ "image/jpeg"
 	_ "image/png"
+	"net/http"
 	"os"
 	"os/exec"
-	
+
 	"github.com/buckket/go-blurhash"
 )
 
@@ -35,7 +35,7 @@ func generateBlurHash(img image.Image) (string, int, int, error) {
 	width := img.Bounds().Dx()
 	height := img.Bounds().Dy()
 
-	hash, err := blurhash.Encode(4, 3, img)
+	hash, err := blurhash.Encode(9, 9, img)
 	return hash, width, height, err
 }
 
@@ -82,7 +82,7 @@ func blurHashFromVideo(videoPath string) (string, int, int, error) {
 		return "", 0, 0, err
 	}
 
-	hash, err := blurhash.Encode(4, 3, img)
+	hash, err := blurhash.Encode(9, 9, img)
 	if err != nil {
 		return "", 0, 0, err
 	}
